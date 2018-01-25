@@ -25,34 +25,54 @@
 //----------------------------------------------------------------------------//
 //------------------------------------------------------------------------------
 // BSDs
-#define ACOW_OS_IS_BSD \
-      BSD           || \
-    __FreeBSD__     || \
-    __NetBSD__      || \
-    __OpenBSD__     || \
-    __bsdi__        || \
-    __DragonFly__
+#define ACOW_OS_IS_BSD 0
+
+#if defined(   BSD         ) || \
+    defined( __FreeBSD__   ) || \
+    defined( __NetBSD__    ) || \
+    defined( __OpenBSD__   ) || \
+    defined( __bsdi__      ) || \
+    defined( __DragonFly__ )
+
+    #define ACOW_OS_IS_BSD 1
+#endif
 
 //------------------------------------------------------------------------------
 // GNU/Linux
-#define ACOW_OS_IS_GNU_LINUX \
-    __gnu_linux__        ||  \
-    __linux__
+#define ACOW_OS_IS_GNU_LINUX  0
+
+#if defined ( __gnu_linux__ ) ||  \
+    defined ( __linux__     )
+
+    #define ACOW_OS_IS_GNU_LINUX 1
+#endif
 
 //------------------------------------------------------------------------------
 // OSX
-#define ACOW_OS_IS_OSX \
-    __APPLE__       && \
-    __MACH__
+#define ACOW_OS_IS_OSX 0
+
+#if defined( __APPLE__ ) && \
+    defined( __MACH__  )
+
+    #define ACOW_OS_IS_OSX 1
+#endif
 
 //------------------------------------------------------------------------------
 // Windows
-#define ACOW_OS_IS_WINDOWS \
-    _WIN32
+#define ACOW_OS_IS_WINDOWS 0
+
+#if defined( _WIN32 )
+
+    #define ACOW_OS_IS_WINDOWS 1
+#endif
 
 //------------------------------------------------------------------------------
 // UNIX
-#define ACOW_OS_IS_UNIX    \
-    COREFS_IS_BSD       || \
-    COREFS_IS_GNU_LINUX || \
-    COREFS_IS_OSX
+#define ACOW_OS_IS_UNIX 0
+
+#if ACOW_OS_IS_BSD       || \
+    ACOW_OS_IS_GNU_LINUX || \
+    ACOW_OS_IS_OSX
+
+    #define ACOW_OS_IS_UNIX 1
+#endif
