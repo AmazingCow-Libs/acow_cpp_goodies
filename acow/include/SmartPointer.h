@@ -36,6 +36,9 @@
 #define ACOW_UNIQUE_PTR_OF(_type_) \
     typedef std::unique_ptr<_type_> UPtr
 
+#define ACOW_UNIQUE_PTR_DELETER_OF(_type_, _func_) \
+	typedef std::unique_ptr<_type_, _func_> UPtr;
+
 
 //----------------------------------------------------------------------------//
 // All Smart Pointers.                                                        //
