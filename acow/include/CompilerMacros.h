@@ -26,28 +26,28 @@
 //----------------------------------------------------------------------------//
 // Clang                                                                      //
 //----------------------------------------------------------------------------//
-#define ACOW_COMPILER_CLANG 0
-
 #if defined(__clang__)
     #define ACOW_COMPILER_CLANG 1
+#else
+    #define ACOW_COMPILER_CLANG 0
 #endif
 
 
 //----------------------------------------------------------------------------//
 // GCC                                                                        //
 //----------------------------------------------------------------------------//
-#define ACOW_COMPILER_GCC 0
-
 #if defined(__GNUC__)
     #define ACOW_COMPILER_GCC 1
+#else
+    #define ACOW_COMPILER_GCC 0
 #endif
 
 
 //----------------------------------------------------------------------------//
 // Microsoft Visual C++                                                       //
 //----------------------------------------------------------------------------//
-#define ACOW_COMPILER_MSVC 0
-
 #if defined(_MSC_VER)
     #define ACOW_COMPILER_MSVC 1
+#else
+    #define ACOW_COMPILER_MSVC 0
 #endif
