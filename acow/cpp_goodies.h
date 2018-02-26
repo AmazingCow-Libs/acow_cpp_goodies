@@ -28,6 +28,8 @@
 #include "include/Disallow.h"
 #include "include/Singleton.h"
 #include "include/SmartPointer.h"
+#include "include/BitwiseUtils.h"
+
 
 // Discovery Macros.
 #include "include/CompilerMacros.h"
