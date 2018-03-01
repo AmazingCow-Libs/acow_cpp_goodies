@@ -28,7 +28,7 @@ project(acow_cpp_goodies)
 ##------------------------------------------------------------------------------
 ## Sources.
 add_library(acow_cpp_goodies
-    acow/src/something.cpp
+    acow/src/private/BitwiseUtils.cpp
 )
 
 
