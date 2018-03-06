@@ -30,7 +30,7 @@
 #include "include/SmartPointer.h"
 #include "include/BitwiseUtils.h"
 #include "include/FakeKeywords.h"
-
+#include "include/Debugger.h"
 
 // Discovery Macros.
 #include "include/CompilerMacros.h"
