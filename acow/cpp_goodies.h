@@ -29,6 +29,7 @@
 #include "include/Singleton.h"
 #include "include/SmartPointer.h"
 #include "include/BitwiseUtils.h"
+#include "include/FakeKeywords.h"
 
 
 // Discovery Macros.
