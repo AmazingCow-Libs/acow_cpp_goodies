@@ -12,4 +12,3 @@
     #define ACOW_CONSTEXPR_LOOSE
 
 #endif
-
