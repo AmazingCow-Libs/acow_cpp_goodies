@@ -24,18 +24,14 @@
 // Macros.
 #include "include/CPP_Version.h"
 #include "include/Constexpr.h"
-#include "include/Deprecated.h"
 #include "include/Disallow.h"
 #include "include/Singleton.h"
 #include "include/SmartPointer.h"
-#include "include/BitwiseUtils.h"
-#include "include/FakeKeywords.h"
-#include "include/Debugger.h"
 
-// Discovery Macros.
-#include "include/CompilerMacros.h"
-#include "include/OSMacros.h"
-#include "include/ProcessorMacros.h"
-
-// Memory
+// Memory.
 #include "include/Memory.h"
+
+//----------------------------------------------------------------------------//
+// Includes                                                                   //
+//----------------------------------------------------------------------------//
+#include "acow/c_goodies.h"

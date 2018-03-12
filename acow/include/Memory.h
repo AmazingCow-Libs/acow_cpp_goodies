@@ -49,11 +49,3 @@ inline std::unique_ptr<T> make_unique( Args&& ...args )
             _ptr_ = nullptr;        \
         }                           \
     } while(0)
-
-#define ACOW_SAFE_FREE(_ptr_)   \
-    do {                        \
-        if(_ptr_) {             \
-            free(_ptr_);        \
-            _ptr_ = nullptr;    \
-        }                       \
-    } while(0)

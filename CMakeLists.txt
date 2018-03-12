@@ -28,11 +28,15 @@ project(acow_cpp_goodies)
 ##------------------------------------------------------------------------------
 ## Sources.
 add_library(acow_cpp_goodies
-    acow/src/Debugger.cpp
-    acow/src/private/BitwiseUtils.cpp
+    acow/src/dummy.cpp ## Just to CMake build the lib.
 )
-
 
 ##------------------------------------------------------------------------------
 ## Include directories.
 target_include_directories(acow_cpp_goodies PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+
+##------------------------------------------------------------------------------
+## Dependencies.
+target_link_libraries(acow_cpp_goodies LINK_PUBLIC acow_c_goodies)
+target_link_libraries(acow_cpp_goodies LINK_PUBLIC CoreAssert)
