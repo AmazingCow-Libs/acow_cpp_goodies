@@ -23,17 +23,38 @@
 // std
 #include <memory>
 
-namespace acow {
-
+namespace acow 
+{
+//----------------------------------------------------------------------------//
+// unique_ptr                                                                 //
+//----------------------------------------------------------------------------//
 template<typename T, typename ...Args>
 inline std::unique_ptr<T> make_unique( Args&& ...args )
 {
     return std::unique_ptr<T>( new T( std::forward<Args>(args)... ) );
 }
 
+//----------------------------------------------------------------------------//
+// Memory                                                                     //
+//----------------------------------------------------------------------------//
+namespace Memory { 
+    template <typename T> void 
+    Clear(T &t) noexcept
+    { 
+        std::memset(&t, 0, sizeof(T));
+    }
+
+    template <typename T> void
+    Clear(T *&t) { 
+        static_assert(false, "Value types only...");
+    }
+} // namespace Memory
+
 } // namespace acow
 
-
+//----------------------------------------------------------------------------//
+// Macros                                                                     //
+//----------------------------------------------------------------------------//
 #define ACOW_SAFE_DELETE(_ptr_) \
     do {                        \
         if(_ptr_) {             \
