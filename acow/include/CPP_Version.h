@@ -19,6 +19,7 @@
 //---------------------------------------------------------------------------~//
 
 #pragma once
+//COWTODO(n2omatt): On MSVC this values are wrong...
 
 #if (__cplusplus == 199711L)
     #define ACOW_CPP_98 1
