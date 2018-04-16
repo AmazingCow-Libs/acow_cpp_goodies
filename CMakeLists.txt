@@ -20,23 +20,35 @@
 
 cmake_minimum_required(VERSION 3.5)
 
-##------------------------------------------------------------------------------
-## Project Settings.
-project(acow_cpp_goodies)
+
+##----------------------------------------------------------------------------##
+## Project                                                                    ##
+##----------------------------------------------------------------------------##
+set(PROJECT acow_cpp_goodies)
+project(${PROJECT})
 
 
+##----------------------------------------------------------------------------##
+## Sources                                                                    ##
+##----------------------------------------------------------------------------##
 ##------------------------------------------------------------------------------
-## Sources.
-add_library(acow_cpp_goodies
-    acow/src/dummy.cpp ## Just to CMake build the lib.
+## Sources
+set(SOURCES
+    acow/src/dummy.cpp ## Just to build the lib.
 )
 
-##------------------------------------------------------------------------------
-## Include directories.
-target_include_directories(acow_cpp_goodies PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
+##----------------------------------------------------------------------------##
+## Library                                                                    ##
+##----------------------------------------------------------------------------##
+##------------------------------------------------------------------------------
+## Lib.
+add_library(${PROJECT} ${SOURCES})
+
+##-----------------------------------------------------------------------------
+## Include directories.
+target_include_directories(${PROJECT} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 ##------------------------------------------------------------------------------
 ## Dependencies.
-target_link_libraries(acow_cpp_goodies LINK_PUBLIC acow_c_goodies)
-target_link_libraries(acow_cpp_goodies LINK_PUBLIC CoreAssert)
+target_link_libraries(${PROJECT} LINK_PUBLIC acow_c_goodies)
