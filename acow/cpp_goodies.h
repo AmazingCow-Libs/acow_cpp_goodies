@@ -21,15 +21,15 @@
 //----------------------------------------------------------------------------//
 // Export Headers                                                             //
 //----------------------------------------------------------------------------//
-// Macros.
+#include "include/Assert.h"
 #include "include/CPP_Version.h"
 #include "include/Constexpr.h"
 #include "include/Disallow.h"
-#include "include/Singleton.h"
-#include "include/SmartPointer.h"
-
-// Memory.
 #include "include/Memory.h"
+#include "include/Pointers/SmartPointer.h"
+#include "include/Pointers/observer_ptr.h"
+#include "include/Singleton.h"
+#include "include/Version.h"
 
 //----------------------------------------------------------------------------//
 // Includes                                                                   //
