@@ -3,7 +3,6 @@
 // AmazingCow Libs
 #include "acow/c_goodies.h"
 
-
 #define ACOW_ASSERT_STDSTR_NOT_EMPTY(_str_) \
     ACOW_ASSERT_CSTR_NOT_EMPTY(_str_.c_str())
 
